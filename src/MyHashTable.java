@@ -143,5 +143,18 @@ public class MyHashTable<K, V> {
         // If the value is not found, return null
         return null;
     }
+    public int[] getBucketSizes() {
+        int[] bucketSizes = new int[M];
+        for (int i = 0; i < M; i++) {
+            int count = 0;
+            HashNode<K, V> current = chainArray[i];
+            while (current != null) {
+                count++;
+                current = current.next;
+            }
+            bucketSizes[i] = count;
+        }
+        return bucketSizes;
+    }
 }
 
