@@ -31,6 +31,9 @@ public class MyHashTable<K, V> {
         size = 0;
     }
     private int hash(K key) {
+        int hashCode = key.hashCode();
+        int index = Math.abs(hashCode % M);
+        return index;
     }
 
     public void put(K key, V value) {
