@@ -20,3 +20,17 @@ Create an instance of MyHashTable with the desired key and value types:
   
   **getKey(V value)**: Retrieves the key associated with a specific value. Returns the key if the value is found, or null if the value is not present.
 
+# MyTestingClass 
+
+This Java program demonstrates the usage of `MyTestingClass` and `MyHashTable` classes. The `MyTestingClass` represents a custom class with a custom implementation of `hashCode()` and `equals()` methods. The `MyHashTable` class is a simple implementation of a hash table that uses instances of `MyTestingClass` as keys.
+
+
+## Usage
+
+
+ Compile the Java files:
+
+   ```shell
+   javac MyTestingClass.java
+   javac MyHashTable.java
+
