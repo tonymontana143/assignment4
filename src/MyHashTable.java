@@ -60,14 +60,21 @@ public class MyHashTable<K, V> {
     }
 
     public V get(K key) {
+        int index = hash(key);
+        if(chainArray[index]!=null){
+            HashNode<K,V> currentNode=chainArray[index];
+            while(currentNode!=null){
+                if(currentNode.key.equals(key)){
+                    return currentNode.value;
+                }
+                currentNode=currentNode.next;
+            }
+        }
+        return null;
     }
 
-    public V remove(K key) {
-    }
 
-    public boolean contains(V value) {
-    }
 
-    public K getKey(V value) {
-    }
+
+
 }
