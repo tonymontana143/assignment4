@@ -72,5 +72,7 @@ public class MyTestingClass {
         // Get the key for a value
         MyTestingClass keyForValue = table.getKey("Value500");
         System.out.println("Key for value 'Value500': " + keyForValue);
+        boolean containsKey=table.contains("Value100");
+        System.out.println("Contains key:"+containsKey);//TEST FOR DEFENCE
     }
 }

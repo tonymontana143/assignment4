@@ -127,7 +127,21 @@ public class MyHashTable<K, V> {
         // If the value is not found, return false
         return false;
     }
-
+    public boolean containsKey(K key){              //DEFENCE
+        for(int i=0;i<M;i++){
+            HashNode<K,V> node=chainArray[i];
+            while (node!=null){
+                if(node.key.equals(key)){
+                    return true;
+                }
+                node=node.next;
+            }
+        }
+        return false;
+    }
+    public int size(){
+        return size;
+    }
     // Get the key associated with a specific value
     public K getKey(V value) {
         for (int i = 0; i < M; i++) {
